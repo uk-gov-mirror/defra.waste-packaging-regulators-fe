@@ -86,7 +86,8 @@ export async function buildCancellationEmailPreview({
 
   const notificationParameters = buildCancellationNotificationParameters({
     registrationType,
-    environmentalRegulator: declaration.organisation?.regulator
+    environmentalRegulator: declaration.organisation?.regulator,
+    businessCountry: wasteOrganisation?.businessCountry
   })
   const personalisation = buildCancellationEmailPersonalisation(
     declaration,
